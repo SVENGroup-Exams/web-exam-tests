@@ -39,7 +39,7 @@ class PetBookingTest extends TestCase
 
     /* CHECK IF PAGE IS RETURNED */
 
-    public function test_submit()
+    public function test_submit_works()
     {
         $this->post('/pets/bookings', $this->data)
             ->assertStatus(204);
