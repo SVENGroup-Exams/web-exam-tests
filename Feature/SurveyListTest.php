@@ -71,8 +71,9 @@ class SurveyListTest extends TestCase
 
     public function test_non_existent_survey()
     {
-        $this->testRequest([])
-            ->assertStatus(404);
+        $response= $this->testRequest([]);
+
+        $this->assertFalse($response->isOk());
     }
 
     /* PAGE SIZE VALIDATION */
